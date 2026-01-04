@@ -1,8 +1,9 @@
-# Ignore log files only
-ml_service/api_log_*.txt
-
-# Ignore corrupted files  
-*.corrupted
-
-# Ignore test files
+# Ignore Backend for Vercel
+ml_service/
+api/
+frontend_requirements.txt
+backend_requirements.txt
+*.py
+*.joblib
+__pycache__/
 test_simulation.py
