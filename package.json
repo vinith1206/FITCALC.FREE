@@ -1,0 +1,12 @@
+{
+    "name": "fitcalc-static",
+    "version": "1.0.0",
+    "description": "Static Frontend for FitCalc",
+    "scripts": {
+        "build": "echo 'Static Build Completed'",
+        "start": "npx serve ."
+    },
+    "dependencies": {
+        "serve": "^14.0.0"
+    }
+}
