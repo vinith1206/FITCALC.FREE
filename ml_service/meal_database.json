@@ -1,0 +1,598 @@
+[
+    {
+        "weight_category": "<50kg",
+        "age_group": "Child (7-12)",
+        "gender": "Male",
+        "activity_level": "Moderate",
+        "diet_type": "Indian-Vegetarian",
+        "target_calories": 1600,
+        "macronutrient_pct": {
+            "carbs": 55,
+            "protein": 20,
+            "fat": 25
+        },
+        "meals": [
+            {
+                "meal_type": "Breakfast",
+                "items": [
+                    {
+                        "food": "Poha with peanuts",
+                        "quantity": "1 cup",
+                        "calories": 250,
+                        "ingredients": [
+                            "Flattened rice",
+                            "Peanuts",
+                            "Onion",
+                            "Turmeric",
+                            "Green chili"
+                        ],
+                        "instructions": "Rinse poha. Sauté peanuts and onions with spices. Mix in poha and steam for 2 mins."
+                    },
+                    {
+                        "food": "Milk",
+                        "quantity": "200ml",
+                        "calories": 130,
+                        "ingredients": [
+                            "Cow milk"
+                        ],
+                        "instructions": "Boil and serve warm."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Lunch",
+                "items": [
+                    {
+                        "food": "Chapati",
+                        "quantity": "2 medium",
+                        "calories": 150,
+                        "ingredients": [
+                            "Whole wheat flour",
+                            "Water"
+                        ],
+                        "instructions": "Knead dough, roll into circles, and cook on a hot tawa."
+                    },
+                    {
+                        "food": "Moong Dal",
+                        "quantity": "1 cup",
+                        "calories": 120,
+                        "ingredients": [
+                            "Yellow moong dal",
+                            "Cumin",
+                            "Turmeric",
+                            "Ghee"
+                        ],
+                        "instructions": "Pressure cook dal. Add tadka of cumin and turmeric in ghee."
+                    },
+                    {
+                        "food": "Aloo Gobbi",
+                        "quantity": "100g",
+                        "calories": 100,
+                        "ingredients": [
+                            "Potato",
+                            "Cauliflower",
+                            "Spices"
+                        ],
+                        "instructions": "Sauté veggies with spices until tender."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Snack",
+                "items": [
+                    {
+                        "food": "Roasted Makhana",
+                        "quantity": "1 bowl",
+                        "calories": 100,
+                        "ingredients": [
+                            "Fox nuts",
+                            "Salt",
+                            "Pepper"
+                        ],
+                        "instructions": "Dry roast makhana until crunchy. Season with salt."
+                    },
+                    {
+                        "food": "Banana",
+                        "quantity": "1 small",
+                        "calories": 90,
+                        "ingredients": [
+                            "Banana"
+                        ],
+                        "instructions": "Peel and eat."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Dinner",
+                "items": [
+                    {
+                        "food": "Vegetable Khichdi",
+                        "quantity": "1.5 cup",
+                        "calories": 300,
+                        "ingredients": [
+                            "Rice",
+                            "Moong dal",
+                            "Mixed veggies",
+                            "Spices"
+                        ],
+                        "instructions": "Cook rice, dal, and veggies together in a pressure cooker with spices."
+                    },
+                    {
+                        "food": "Curd",
+                        "quantity": "100g",
+                        "calories": 60,
+                        "ingredients": [
+                            "Milk",
+                            "Culture"
+                        ],
+                        "instructions": "Set milk with culture overnight."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "weight_category": "50-70kg",
+        "age_group": "Adult (18-40)",
+        "gender": "Female",
+        "activity_level": "Active",
+        "diet_type": "Indian-Vegetarian",
+        "target_calories": 2000,
+        "macronutrient_pct": {
+            "carbs": 55,
+            "protein": 20,
+            "fat": 25
+        },
+        "meals": [
+            {
+                "meal_type": "Breakfast",
+                "items": [
+                    {
+                        "food": "Paneer Paratha",
+                        "quantity": "2 medium",
+                        "calories": 400,
+                        "ingredients": [
+                            "Whole wheat flour",
+                            "Paneer",
+                            "Green chilies",
+                            "Spices"
+                        ],
+                        "instructions": "Stuff spiced paneer in dough rounds, roll, and shallow fry with ghee."
+                    },
+                    {
+                        "food": "Curd",
+                        "quantity": "1 bowl",
+                        "calories": 100,
+                        "ingredients": [
+                            "Milk",
+                            "Culture"
+                        ],
+                        "instructions": "Fresh homemade yogurt."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Lunch",
+                "items": [
+                    {
+                        "food": "Brown Rice",
+                        "quantity": "150g",
+                        "calories": 200,
+                        "ingredients": [
+                            "Brown rice",
+                            "Water"
+                        ],
+                        "instructions": "Boil brown rice with double the water until soft."
+                    },
+                    {
+                        "food": "Rajma Curry",
+                        "quantity": "1.5 cup",
+                        "calories": 250,
+                        "ingredients": [
+                            "Red kidney beans",
+                            "Tomato",
+                            "Onion",
+                            "Ginger-garlic",
+                            "Rajma masala"
+                        ],
+                        "instructions": "Pressure cook soaked beans. Sauté aromatics and tomatoes, add beans and simmer."
+                    },
+                    {
+                        "food": "Cucumber Raita",
+                        "quantity": "100g",
+                        "calories": 80,
+                        "ingredients": [
+                            "Cucumber",
+                            "Yogurt",
+                            "Roasted cumin powder"
+                        ],
+                        "instructions": "Grate cucumber and mix into whisked yogurt with cumin."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Snack",
+                "items": [
+                    {
+                        "food": "Sprouted Moong Salad",
+                        "quantity": "1 cup",
+                        "calories": 150,
+                        "ingredients": [
+                            "Sprouted moong beans",
+                            "Onion",
+                            "Tomato",
+                            "Lemon juice"
+                        ],
+                        "instructions": "Steam sprouts lightly and toss with chopped veggies and lemon."
+                    },
+                    {
+                        "food": "Green Tea",
+                        "quantity": "1 cup",
+                        "calories": 0,
+                        "ingredients": [
+                            "Green tea bag",
+                            "Hot water"
+                        ],
+                        "instructions": "Steep for 3 minutes."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Dinner",
+                "items": [
+                    {
+                        "food": "Multigrain Rotis",
+                        "quantity": "2",
+                        "calories": 160,
+                        "ingredients": [
+                            "Multigrain flour",
+                            "Water"
+                        ],
+                        "instructions": "Prepare dough and cook like chapatis."
+                    },
+                    {
+                        "food": "Baingan Bharta",
+                        "quantity": "1 cup",
+                        "calories": 180,
+                        "ingredients": [
+                            "Eggplant",
+                            "Tomato",
+                            "Onion",
+                            "Peas",
+                            "Spices"
+                        ],
+                        "instructions": "Roast eggplant, peel and mash. Sauté with onions, tomatoes and peas."
+                    },
+                    {
+                        "food": "Tarka Dal",
+                        "quantity": "1 cup",
+                        "calories": 150,
+                        "ingredients": [
+                            "Arhar dal",
+                            "Garlic",
+                            "Dry red chili",
+                            "Ghee"
+                        ],
+                        "instructions": "Cook dal. Add a sizzling tempering of garlic and chilies in ghee."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "weight_category": "70-90kg",
+        "age_group": "Adult (18-40)",
+        "gender": "Male",
+        "activity_level": "Active",
+        "diet_type": "Indian-Non-Vegetarian",
+        "target_calories": 2600,
+        "macronutrient_pct": {
+            "carbs": 50,
+            "protein": 25,
+            "fat": 25
+        },
+        "meals": [
+            {
+                "meal_type": "Breakfast",
+                "items": [
+                    {
+                        "food": "Masala Omelette (3 eggs)",
+                        "quantity": "1 plate",
+                        "calories": 350,
+                        "ingredients": [
+                            "3 Eggs",
+                            "Onion",
+                            "Tomato",
+                            "Green chili",
+                            "Spices"
+                        ],
+                        "instructions": "Whisk eggs with chopped veggies and spices. Cook on tawa with little oil."
+                    },
+                    {
+                        "food": "Whole-wheat toast",
+                        "quantity": "2 slices",
+                        "calories": 160,
+                        "ingredients": [
+                            "Whole wheat bread"
+                        ],
+                        "instructions": "Toast until golden brown."
+                    },
+                    {
+                        "food": "Fresh Orange Juice",
+                        "quantity": "200ml",
+                        "calories": 90,
+                        "ingredients": [
+                            "Oranges"
+                        ],
+                        "instructions": "Squeeze fresh oranges and serve chilled."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Lunch",
+                "items": [
+                    {
+                        "food": "Chicken Biryani (Lean)",
+                        "quantity": "250g",
+                        "calories": 550,
+                        "ingredients": [
+                            "Basmati rice",
+                            "Chicken breast",
+                            "Biryani spices",
+                            "Yogurt"
+                        ],
+                        "instructions": "Layer marinated chicken and semi-cooked rice. Cook on low heat (Dum)."
+                    },
+                    {
+                        "food": "Mixed Veg Raita",
+                        "quantity": "1 bowl",
+                        "calories": 120,
+                        "ingredients": [
+                            "Yogurt",
+                            "Carrot",
+                            "Cucumber",
+                            "Boondi"
+                        ],
+                        "instructions": "Mix chopped veggies into whisked yogurt."
+                    },
+                    {
+                        "food": "Green Salad",
+                        "quantity": "1 plate",
+                        "calories": 40,
+                        "ingredients": [
+                            "Lettuce",
+                            "Cucumber",
+                            "Lemon"
+                        ],
+                        "instructions": "Toss fresh greens with a squeeze of lemon."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Snack",
+                "items": [
+                    {
+                        "food": "Boiled Chickpeas (Chana Chat)",
+                        "quantity": "1 cup",
+                        "calories": 200,
+                        "ingredients": [
+                            "Boiled chickpeas",
+                            "Chaat masala",
+                            "Onion"
+                        ],
+                        "instructions": "Mix boiled chana with masala and onions."
+                    },
+                    {
+                        "food": "Buttermilk (Chaas)",
+                        "quantity": "1 glass",
+                        "calories": 60,
+                        "ingredients": [
+                            "Yogurt",
+                            "Water",
+                            "Cumin",
+                            "Ginger"
+                        ],
+                        "instructions": "Blend yogurt and water with spices. Serve cold."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Dinner",
+                "items": [
+                    {
+                        "food": "Tandoori Rotis",
+                        "quantity": "3",
+                        "calories": 270,
+                        "ingredients": [
+                            "Whole wheat flour",
+                            "Yeast/Baking powder"
+                        ],
+                        "instructions": "Cook rolled dough in a clay oven or on tawa with high heat."
+                    },
+                    {
+                        "food": "Fish / Chicken Curry",
+                        "quantity": "200g",
+                        "calories": 350,
+                        "ingredients": [
+                            "Fish/Chicken",
+                            "Onion-tomato gravy",
+                            "Whole spices"
+                        ],
+                        "instructions": "Simmer meat/fish in a spiced tomato-onion based gravy."
+                    },
+                    {
+                        "food": "Dal Makhani (Small portion)",
+                        "quantity": "0.5 cup",
+                        "calories": 150,
+                        "ingredients": [
+                            "Black lentil",
+                            "Kidney beans",
+                            "Butter",
+                            "Cream"
+                        ],
+                        "instructions": "Slow cook lentils overnight with spices and finish with cream."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "weight_category": "70-90kg",
+        "age_group": "Adult (18-40)",
+        "gender": "Male",
+        "activity_level": "Active",
+        "diet_type": "Indian-Vegetarian",
+        "target_calories": 2400,
+        "macronutrient_pct": {
+            "carbs": 50,
+            "protein": 25,
+            "fat": 25
+        },
+        "meals": [
+            {
+                "meal_type": "Breakfast",
+                "items": [
+                    {
+                        "food": "Idli with Sambar & Chutney",
+                        "quantity": "3 idlis",
+                        "calories": 350,
+                        "ingredients": [
+                            "Fermented rice & urad dal batter",
+                            "Lentils",
+                            "Veggies",
+                            "Coconut"
+                        ],
+                        "instructions": "Steam idlis. Cook dal with veggies (Sambar). Grind coconut with chilies (Chutney)."
+                    },
+                    {
+                        "food": "Filter Coffee (small)",
+                        "quantity": "1 cup",
+                        "calories": 80,
+                        "ingredients": [
+                            "Coffee grounds",
+                            "Milk",
+                            "Sugar"
+                        ],
+                        "instructions": "Brew decoction in a filter. Mix with hot frothed milk."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Lunch",
+                "items": [
+                    {
+                        "food": "Jeera Rice",
+                        "quantity": "200g",
+                        "calories": 280,
+                        "ingredients": [
+                            "Basmati rice",
+                            "Cumin seeds",
+                            "Ghee"
+                        ],
+                        "instructions": "Sauté cumin in ghee. Add boiled rice and toss."
+                    },
+                    {
+                        "food": "Chole Masala",
+                        "quantity": "1.5 cup",
+                        "calories": 320,
+                        "ingredients": [
+                            "Chickpeas",
+                            "Pomegranate powder",
+                            "Dry ginger",
+                            "Spices"
+                        ],
+                        "instructions": "Simmer soaked chickpeas in a spicy, tangy tea-infused gravy."
+                    },
+                    {
+                        "food": "Bhindi Masala",
+                        "quantity": "1 cup",
+                        "calories": 150,
+                        "ingredients": [
+                            "Okra",
+                            "Dry mango powder",
+                            "Onion"
+                        ],
+                        "instructions": "Fry okra with spices until non-sticky and tender."
+                    },
+                    {
+                        "food": "Boondi Raita",
+                        "quantity": "1 bowl",
+                        "calories": 150,
+                        "ingredients": [
+                            "Yogurt",
+                            "Fried gram flour balls (Boondi)"
+                        ],
+                        "instructions": "Soak boondi in water, squeeze, and mix into spiced yogurt."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Snack",
+                "items": [
+                    {
+                        "food": "Upma",
+                        "quantity": "1 bowl",
+                        "calories": 250,
+                        "ingredients": [
+                            "Semolina (Suji)",
+                            "Mustard seeds",
+                            "Curry leaves",
+                            "Veggies"
+                        ],
+                        "instructions": "Roast suji. Sauté mustard and veggies. Add water and suji, cook until thick."
+                    },
+                    {
+                        "food": "Lassi (Low sugar)",
+                        "quantity": "1 glass",
+                        "calories": 150,
+                        "ingredients": [
+                            "Thick yogurt",
+                            "Rose water",
+                            "Stevia/Honey"
+                        ],
+                        "instructions": "Blend yogurt until frothy. Add flavorings and serve chilled."
+                    }
+                ]
+            },
+            {
+                "meal_type": "Dinner",
+                "items": [
+                    {
+                        "food": "Phulkas",
+                        "quantity": "3",
+                        "calories": 210,
+                        "ingredients": [
+                            "Whole wheat flour",
+                            "Water"
+                        ],
+                        "instructions": "Roll dough thin. Cook on tawa then puff over direct flame."
+                    },
+                    {
+                        "food": "Paneer Butter Masala",
+                        "quantity": "150g",
+                        "calories": 380,
+                        "ingredients": [
+                            "Paneer cubes",
+                            "Cashew paste",
+                            "Tomato puree",
+                            "Butter"
+                        ],
+                        "instructions": "Cook paneer in a rich, creamy, buttery tomato-based gravy."
+                    },
+                    {
+                        "food": "Dal Tadka",
+                        "quantity": "1 cup",
+                        "calories": 150,
+                        "ingredients": [
+                            "Toor dal",
+                            "Garlic",
+                            "Cumin",
+                            "Dry red chilies"
+                        ],
+                        "instructions": "Boil dal. Top with a sizzle of garlic and cumin in ghee."
+                    }
+                ]
+            }
+        ]
+    }
+]

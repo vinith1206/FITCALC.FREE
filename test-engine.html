@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Nutrition Engine</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a2e; color: #eee; }
+        .result { background: #16213e; padding: 20px; margin: 10px 0; border-radius: 8px; }
+        .success { border-left: 4px solid #00ff00; }
+        .error { border-left: 4px solid #ff0000; }
+        button { background: #0f3460; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #1a5490; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Nutrition Engine Test Page</h1>
+    
+    <button onclick="runTest()">Run Test</button>
+    
+    <div id="output"></div>
+
+    <script src="assets/js/engine/nutrition-engine.js"></script>
+    <script>
+        function runTest() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<h2>Running Tests...</h2>';
+            
+            // Test 1: Check if function exists
+            if (typeof calculateNutritionPlan !== 'function') {
+                output.innerHTML += '<div class="result error">❌ ERROR: calculateNutritionPlan function not found!</div>';
+                return;
+            }
+            output.innerHTML += '<div class="result success">✅ Function loaded successfully</div>';
+            
+            // Test 2: Run calculation
+            try {
+                const profile = {
+                    age: 28,
+                    weight: 70,
+                    height: 170,
+                    gender: 'Male',
+                    activityLevel: 'Moderate',
+                    dietType: 'Vegetarian',
+                    goal: 'Weight Loss'
+                };
+                
+                const result = calculateNutritionPlan(profile);
+                
+                if (result.success) {
+                    output.innerHTML += '<div class="result success">';
+                    output.innerHTML += '<h3>✅ Test PASSED!</h3>';
+                    output.innerHTML += '<p><strong>BMR:</strong> ' + result.bmr + ' kcal/day</p>';
+                    output.innerHTML += '<p><strong>TDEE:</strong> ' + result.tdee + ' kcal/day</p>';
+                    output.innerHTML += '<p><strong>Target Calories:</strong> ' + result.targetCalories + ' kcal/day</p>';
+                    output.innerHTML += '<p><strong>Matched Plan:</strong> ' + result.plan.name + '</p>';
+                    output.innerHTML += '<p><strong>Plan ID:</strong> ' + result.plan.id + '</p>';
+                    output.innerHTML += '<p><strong>Macros:</strong> P: ' + result.macros.protein + 'g, C: ' + result.macros.carbs + 'g, F: ' + result.macros.fats + 'g</p>';
+                    
+                    if (result.plan.meals && result.plan.meals.breakfast) {
+                        output.innerHTML += '<h4>Sample Breakfast:</h4><ul>';
+                        result.plan.meals.breakfast.forEach(item => {
+                            output.innerHTML += '<li>' + item.food + ' - ' + item.portion + ' (' + item.calories + ' cal)</li>';
+                        });
+                        output.innerHTML += '</ul>';
+                    }
+                    
+                    output.innerHTML += '</div>';
+                } else {
+                    output.innerHTML += '<div class="result error">❌ ERROR: ' + result.error + '</div>';
+                }
+            } catch (error) {
+                output.innerHTML += '<div class="result error">❌ EXCEPTION: ' + error.message + '</div>';
+                console.error(error);
+            }
+        }
+        
+        // Auto-run on load
+        window.addEventListener('load', runTest);
+    </script>
+</body>
+</html>

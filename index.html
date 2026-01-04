@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCalc - Master Your Nutrition for Free</title>
+    <meta name="description"
+        content="Free fitness and nutrition calculator. Calculate BMR, TDEE, macros, and get personalized diet plans. No signup required.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FITCALC<span>.FREE</span></div>
+                <ul class="nav-links">
+                    <li><a href="calculator.html" data-i18n="nav_calories">Calories</a></li>
+                    <li><a href="bmi-calculator.html">BMI</a></li>
+                    <li><a href="ml-diet.html" class="nav-highlight" data-i18n="nav_ai">AI Diet <span
+                                class="badge">NEW</span></a></li>
+                    <li><a href="ideal-weight.html">Ideal Weight</a></li>
+                    <li><a href="macro-calculator.html">Macros</a></li>
+                    <li><a href="water-calculator.html">Water</a></li>
+                    <li><a href="body-fat.html">Body Fat</a></li>
+                    <li><a href="tracker.html" data-i18n="nav_tracker">Tracker</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        Master Your Nutrition<br>
+                        <span class="gradient-text">for Free</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        Calculate your calories, discover your TDEE, check your BMI, and get a simple,
+                        rule-based diet plan to reach your goals.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="calculator.html" class="btn btn-primary btn-glow">
+                            <span data-i18n="hero_cta_start">START CALCULATOR</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            <span data-i18n="hero_cta_how">HOW IT WORKS</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Free Forever</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Sign-ups Required</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Calculators</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="how-it-works" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Use This Tool?</h2>
+                <p class="section-subtitle">Everything you need to understand your nutrition, completely free</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5L25 15H35L27.5 22.5L30 32.5L20 25L10 32.5L12.5 22.5L5 15H15L20 5Z"
+                                    stroke="var(--primary-color)" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <h3>Scientific Accuracy</h3>
+                        <p>We use the Mifflin-St Jeor formula for calories and standard formulas for BMI.
+                            Trusted by nutritionists worldwide.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="15" stroke="var(--primary-color)" stroke-width="2"
+                                    fill="none" />
+                                <path d="M20 10V20L27 27" stroke="var(--primary-color)" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Instant Results</h3>
+                        <p>Get your personalized nutrition plan in seconds. No waiting, no processing,
+                            just instant, accurate calculations.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="10" y="10" width="20" height="20" rx="2" stroke="var(--primary-color)"
+                                    stroke-width="2" fill="none" />
+                                <path d="M15 20L18 23L25 16" stroke="var(--primary-color)" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>100% Free</h3>
+                        <p>No subscriptions, no sign-ups, no hidden fees. Just useful tools that work.
+                            Always free, forever.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5C11.7 5 5 11.7 5 20C5 28.3 11.7 35 20 35C28.3 35 35 28.3 35 20"
+                                    stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" fill="none" />
+                                <path d="M20 12V20H28" stroke="var(--primary-color)" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Simple Plans</h3>
+                        <p>Get a straightforward meal plan based on your goals without complex tracking.
+                            Easy to understand, easy to follow.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 8L22 18H32L24 24L27 34L20 28L13 34L16 24L8 18H18L20 8Z"
+                                    stroke="var(--success-color)" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <h3>AI-Powered Diet</h3>
+                        <p>Try our new ML-powered diet planner that creates personalized meal plans
+                            based on your unique profile and goals.</p>
+                        <a href="ml-diet.html" class="feature-link">Try AI Diet →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="8" y="12" width="24" height="20" rx="2" stroke="var(--primary-color)"
+                                    stroke-width="2" fill="none" />
+                                <path d="M14 12V8M26 12V8M8 18H32" stroke="var(--primary-color)" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your journey with our built-in tracker. Log your weight, calories,
+                            and see your progress over time.</p>
+                        <a href="tracker.html" class="feature-link">Open Tracker →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Join thousands who've taken control of their nutrition with our free tools</p>
+                    <a href="calculator.html" class="btn btn-primary btn-large btn-glow">
+                        Calculate Your Calories Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">FITCALC<span>.FREE</span></div>
+                    <p>Your free companion for nutrition and fitness</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="calculator.html">Calorie Calculator</a></li>
+                        <li><a href="ml-diet.html">AI Diet Planner</a></li>
+                        <li><a href="tracker.html">Progress Tracker</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FitCalc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Enhanced Homepage Styles */
+        .hero-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary-color), transparent);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--secondary-color), transparent);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: 7s;
+        }
+
+        .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--accent-color), transparent);
+            top: 50%;
+            right: 10%;
+            animation-delay: 14s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .hero {
+            padding: 8rem 0 6rem;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+
+        .btn-large {
+            padding: 1.25rem 3rem;
+            font-size: 1.1rem;
+        }
+
+        .btn svg {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover svg {
+            transform: translateX(5px);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 5rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .features-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--surface-color);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 240, 255, 0.1);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 240, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: rgba(0, 240, 255, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .feature-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .feature-link:hover {
+            gap: 0.5rem;
+        }
+
+        .cta-section {
+            padding: 6rem 0;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(112, 0, 255, 0.1));
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .nav-highlight {
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -25px;
+            background: var(--accent-color);
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid var(--surface-border);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .footer-links h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--surface-border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                padding: 4rem 0 3rem;
+            }
+        }
+    </style>
+    <script src="assets/js/i18n.js"></script>
+</body>
+
+</html>

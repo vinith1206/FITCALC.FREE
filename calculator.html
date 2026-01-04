@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Use our free calorie calculator to find your TDEE and BMR based on the Mifflin-St Jeor equation. Accurate and simple.">
+    <title>Calorie Calculator | FitCalc</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FITCALC<span>.FREE</span></div>
+                <ul class="nav-links">
+                    <li><a href="calculator.html" class="active" data-i18n="nav_calories">Calories</a></li>
+                    <li><a href="bmi-calculator.html">BMI</a></li>
+                    <li><a href="ml-diet.html" class="">AI Diet <span class="badge">NEW</span></a></li>
+                    <li><a href="ideal-weight.html">Ideal Weight</a></li>
+                    <li><a href="macro-calculator.html">Macros</a></li>
+                    <li><a href="water-calculator.html">Water</a></li>
+                    <li><a href="body-fat.html">Body Fat</a></li>
+                    <li><a href="tracker.html" data-i18n="nav_tracker">Tracker</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-section">
+            <div class="container">
+                <h1>Calculate Your Daily Calories</h1>
+                <p>Enter your details below to get a scientific estimate of your daily energy needs.</p>
+
+                <form id="calorie-form" action="results.html" method="GET" class="card">
+                    <div class="form-group" style="flex: 1; min-width: 100px;">
+                        <label for="age" data-i18n="age_lbl">Age</label>
+                        <input type="number" id="age" name="age" required value="25">
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="gender_lbl">Gender</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male" checked> Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female"> Female
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label for="height" data-i18n="height_lbl">Height (cm)</label>
+                        <input type="number" id="height" name="height" required value="175">
+                    </div>
+
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label for="weight" data-i18n="weight_lbl">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight" required value="70">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goal-weight">Goal Weight (kg)</label>
+                        <input type="number" id="goal-weight" name="goal-weight" required placeholder="e.g., 65">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activity" data-i18n="activity_lbl">Activity Level</label>
+                        <select id="activity" name="activity" class="mt-1">
+                            <option value="1.2">Sedentary (Office job)</option>
+                            <option value="1.375">Light Exercise (1-2 days/week)</option>
+                            <option value="1.55">Moderate Exercise (3-5 days/week)</option>
+                            <option value="1.725">Active Exercise (6-7 days/week)</option>
+                            <option value="1.9">Extremely Active (Athlete)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goal" data-i18n="goal_lbl">Goal</label>
+                        <select id="goal" name="goal" class="goal-selector">
+                            <option value="maintain">Maintain Weight</option>
+                            <option value="mildloss">Mild Weight Loss (-0.25kg/week)</option>
+                            <option value="loss">Weight Loss (-0.5kg/week)</option>
+                            <option value="extremeloss">Extreme Weight Loss (-1kg/week)</option>
+                            <option value="mildgain">Mild Weight Gain (+0.25kg/week)</option>
+                            <option value="gain">Weight Gain (+0.5kg/week)</option>
+                            <option value="extremegain">Extreme Weight Gain (+1kg/week)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="calculate_btn">Calculate My
+                        Calories</button>
+                </form>
+
+                <!-- AdSense Placeholder: Below Form -->
+                <div class="ad-container mt-2">
+                    <p class="ad-label">Advertisement</p>
+                    <div class="ad-box">
+                        <p>Google Ad (Square/Rectangle)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fitness & Nutrition Calculator</p>
+            <ul class="footer-links">
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/calculator.js"></script>
+</body>
+
+</html>

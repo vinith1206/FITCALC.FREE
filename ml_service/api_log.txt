@@ -1,0 +1,12 @@
+INFO:     Started server process [83456]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Model artifacts loaded.
+Meal Database loaded: 3 plans.
+INFO:     127.0.0.1:57818 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57825 - "OPTIONS /predict HTTP/1.1" 200 OK
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+Prediction Error: name 'diff' is not defined
+INFO:     127.0.0.1:57825 - "POST /predict HTTP/1.1" 500 Internal Server Error

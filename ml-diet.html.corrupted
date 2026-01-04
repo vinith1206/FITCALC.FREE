@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#05050a">
+    <title>AI Nutritionist | FitCalc ML</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FITCALC<span>.FREE</span></div>
+                <ul class="nav-links">
+                    <li><a href="calculator.html">Calories</a></li>
+                    <li><a href="bmi-calculator.html">BMI</a></li>
+                    <li><a href="ml-diet.html" class="nav-highlight">AI Diet <span class="ai-badge">NEW</span></a></li>
+                    <li><a href="ideal-weight.html">Ideal Weight</a></li>
+                    <li><a href="macro-calculator.html">Macros</a></li>
+                    <li><a href="water-calculator.html">Water</a></li>
+                    <li><a href="body-fat.html">Body Fat</a></li>
+                    <li><a href="tracker.html">Tracker</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-small">
+            <h1>AI Nutrition Engine</h1>
+            <p>Powered by Machine Learning (Frontend Rule-Based)</p>
+        </section>
+
+        <div class="calculator-grid">
+            <div class="card">
+                <form id="ml-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" id="age" required min="10" max="100" placeholder="e.g., 28">
+                        </div>
+                        <div class="form-group">
+                            <label>Weight (kg)</label>
+                            <input type="number" id="weight" required min="20" max="300" step="0.1" placeholder="e.g., 70">
+                        </div>
+                        <div class="form-group">
+                            <label>Height (cm)</label>
+                            <input type="number" id="height" required min="100" max="250" placeholder="e.g., 170">
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select id="gender" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Activity Level</label>
+                            <select id="activity" required>
+                                <option value="Sedentary">Sedentary (office job)</option>
+                                <option value="Light">Lightly Active</option>
+                                <option value="Moderate" selected>Moderately Active</option>
+                                <option value="Active">Active</option>
+                                <option value="Very Active">Very Active (athlete)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Diet Type</label>
+                            <select id="diet" required>
+                                <option value="Vegetarian">Vegetarian</option>
+                                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label>Goal</label>
+                            <select id="goal" required>
+                                <option value="Weight Loss">Weight Loss</option>
+                                <option value="Extreme Weight Loss">Extreme Weight Loss</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Muscle Gain">Muscle Gain</option>
+                                <option value="Weight Gain">Weight Gain</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" onclick="predict()" class="btn btn-primary btn-block btn-glow" style="margin-top: 1.5rem;">Generate Plan</button>
+                </form>
+            </div>
+
+            <div id="results-area" class="results-container" style="display:none;">
+                <div class="card result-card">
+                    <h2>AI Recommended Intake</h2>
+                    <div class="big-number" id="res-cals">--</div>
+                    <p>Calories / Day</p>
+                    
+                    <div class="macro-bars">
+                        <div class="macro-item">
+                            <div class="macro-label"><span>Protein</span><span id="res-p">--g</span></div>
+                            <div class="progress-bar"><div id="bar-p" class="progress-fill fill-protein" style="width: 0%"></div></div>
+                        </div>
+                        <div class="macro-item">
+                            <div class="macro-label"><span>Carbs</span><span id="res-c">--g</span></div>
+                            <div class="progress-bar"><div id="bar-c" class="progress-fill fill-carbs" style="width: 0%"></div></div>
+                        </div>
+                        <div class="macro-item">
+                            <div class="macro-label"><span>Fats</span><span id="res-f">--g</span></div>
+                            <div class="progress-bar"><div id="bar-f" class="progress-fill fill-fats" style="width: 0%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">
+                    * Matched from 120 professional diet plans (ICMR/NIN guidelines)
+                </p>
+
+                <div id="ai-meal-plan" style="margin-top: 2rem; display: none;">
+                    <h3 style="border-bottom: 1px solid var(--surface-border); padding-bottom: 0.5rem; margin-bottom: 1rem;">Recommended Sample Day</h3>
+                    <div id="meals-container"></div>
+                </div>
+            </div>
+            
+            <div id="error-box" class="card" style="display:none; border-color: var(--accent-color); color: var(--accent-color); text-align: center;">
+                <h3>⚠️ Error</h3>
+                <p>Please check your inputs and try again.</p>
+            </div>
+            
+            <div id="loading" class="loading-overlay">
+                <h3 class="pulse">Consulting AI Model...</h3>
+            </div>
+        </div>
+    </main>
+
+    <div style="text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--surface-border);">
+        <p><strong>Disclaimer:</strong> The results provided by this AI tool are for informational purposes only and do not constitute medical advice. <br>Always consult a healthcare professional before making significant changes to your diet or exercise routine.</p>
+    </div>
+
+    <script src="assets/js/engine/nutrition-engine.js"></script>
+    <script>
+        async function predict() {
+            const resultBox = document.getElementById('results-area');
+            const errorBox = document.getElementById('error-box');
+            const loading = document.getElementById('loading');
+            
+            resultBox.style.display = 'none';
+            errorBox.style.display = 'none';
+            loading.style.display = 'flex';
+            
+            setTimeout(function() {
+                const profile = {
+                    age: parseInt(document.getElementById('age').value),
+                    weight: parseFloat(document.getElementById('weight').value),
+                    height: parseFloat(document.getElementById('height').value),
+                    gender: document.getElementById('gender').value,
+                    activityLevel: document.getElementById('activity').value,
+                    dietType: document.getElementById('diet').value,
+                    goal: document.getElementById('goal').value
+                };
+                
+                const result = calculateNutritionPlan(profile);
+                loading.style.display = 'none';
+                
+                if (!result.success) {
+                    errorBox.querySelector('p').textContent = result.error;
+                    errorBox.style.display = 'block';
+                    return;
+                }
+                
+                document.getElementById('res-cals').innerText = result.targetCalories;
+                document.getElementById('res-p').innerText = result.macros.protein + 'g';
+                document.getElementById('res-c').innerText = result.macros.carbs + 'g';
+                document.getElementById('res-f').innerText = result.macros.fats + 'g';
+                
+                const cals = result.targetCalories;
+                const pPct = ((result.macros.protein * 4) / cals) * 100;
+                const cPct = ((result.macros.carbs * 4) / cals) * 100;
+                const fPct = ((result.macros.fats * 9) / cals) * 100;
+                
+                document.getElementById('bar-p').style.width = pPct + '%';
+                document.getElementById('bar-c').style.width = cPct + '%';
+                document.getElementById('bar-f').style.width = fPct + '%';
+                
+                const mealBox = document.getElementById('ai-meal-plan');
+                const mealsContainer = document.getElementById('meals-container');
+                
+                if (result.plan && result.plan.meals) {
+                    mealBox.style.display = 'block';
+                    const meals = result.plan.meals;
+                    let mealHTML = '';
+                    
+                    function renderMeal(mealName, mealItems) {
+                        if (!mealItems || !Array.isArray(mealItems) || mealItems.length === 0) return '';
+                        let html = '<div class="card" style="padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.05);">';
+                        html += '<h4 style="color:var(--primary-color); margin-bottom: 0.5rem;">' + mealName + '</h4>';
+                        html += '<ul style="list-style: none; padding: 0;">';
+                        for (let i = 0; i < mealItems.length; i++) {
+                            html += '<li style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">';
+                            html += '<span>' + mealItems[i].food + ' <span style="color:var(--text-muted)">(' + mealItems[i].portion + ')</span></span>';
+                            html += '<span style="font-weight:bold;">' + mealItems[i].calories + ' cal</span>';
+                            html += '</li>';
+                        }
+                        html += '</ul></div>';
+                        return html;
+                    }
+                    
+                    mealHTML += renderMeal('Breakfast', meals.breakfast);
+                    mealHTML += renderMeal('Mid-Morning', meals.midMorning);
+                    mealHTML += renderMeal('Lunch', meals.lunch);
+                    mealHTML += renderMeal('Evening Snack', meals.eveningSnack);
+                    mealHTML += renderMeal('Dinner', meals.dinner);
+                    
+                    mealsContainer.innerHTML = mealHTML;
+                }
+                
+                resultBox.style.display = 'block';
+                resultBox.scrollIntoView({ behavior: 'smooth' });
+            }, 500);
+        }
+    </script>
+</body>
+</html>

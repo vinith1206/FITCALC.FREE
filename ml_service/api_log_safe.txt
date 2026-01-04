@@ -1,0 +1,9 @@
+INFO:     Started server process [63018]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Model artifacts loaded.
+Meal Database loaded: 3 plans.
+INFO:     127.0.0.1:56813 - "GET /sw.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56906 - "GET /sw.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56969 - "GET /sw.js HTTP/1.1" 404 Not Found
