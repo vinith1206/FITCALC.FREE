@@ -1,0 +1,7 @@
+# Ignore Backend for Vercel
+ml_service/
+api/
+requirements.txt
+*.py
+*.joblib
+__pycache__/
