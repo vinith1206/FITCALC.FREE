@@ -1,7 +1,9 @@
 # Ignore Backend for Vercel
 ml_service/
 api/
-requirements.txt
+frontend_requirements.txt
+backend_requirements.txt
 *.py
 *.joblib
 __pycache__/
+test_simulation.py
