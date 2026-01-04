@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/vineeth/Downloads/downloads/vineeth/fitness application/ml_service/app.py", line 1, in <module>
-    from fastapi import FastAPI, HTTPException
-ModuleNotFoundError: No module named 'fastapi'
